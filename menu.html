@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+      body {
+          background-image: url('images/npalogo.png');
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          height: 100vh;
+          margin: 0;
+          padding: 0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+      }
+      .form-container {
+          background-color: rgba(255, 255, 255, 0.8);
+          padding: 20px;
+          border-radius: 10px;
+      }
+      /* Custom CSS for loading spinner */
+      .loading-overlay {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(255, 255, 255, 0.7);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          z-index: 1000; /* Ensure it's on top of other elements */
+      }
+      .spinner-border {
+          width: 3rem;
+          height: 3rem;
+      }
+    </style>
+</head>
+<body>
+
+<!-- Loading overlay -->
+<div class="loading-overlay d-none">
+    <div class="spinner-border text-primary" role="status">
+        <span class="sr-only">Loading...</span>
+    </div>
+</div>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-success fixed-top navbar-light">
+  <div class="container">
+    <button class="navbar-toggler navbar-toggler-light" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Menu
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="project_details.html" onclick="showLoading('project_details.html')">Project Details</a>
+            <a class="dropdown-item" href="project_progress.html" onclick="showLoading('project_progress.html')">Progress</a>
+            <a class="dropdown-item" href="project_report.html" onclick="showLoading('project_report.html')">Report</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+    function showLoading(pageUrl) {
+        // Show loading overlay
+        document.querySelector('.loading-overlay').classList.remove('d-none');
+        
+        // Delay navigation to the page after 60 seconds
+        setTimeout(function() {
+            window.location.href = pageUrl;
+        }, 60000);
+    }
+</script>
+
+</body>
+</html>
