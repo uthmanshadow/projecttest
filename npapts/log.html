@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="(link unavailable)">
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: #f5f5f5;
+        }
+        .login-container {
+            max-width: 400px;
+            padding: 20px;
+            margin: 50px auto;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .login-container img {
+            max-width: 100px;
+            margin-bottom: 20px;
+        }
+        .login-form {
+            margin-top: 20px;
+        }
+        .login-form-input {
+            height: 30px; /* Reduced height */
+            margin-bottom: 10px; /* Reduced margin */
+            padding: 5px; /* Reduced padding */
+            font-size: 16px;
+            border: 1px solid #ccc;
+            width: 100%;
+        }
+        .login-form-button {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .login-form-button:hover {
+            background-color: #3e8e41;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <img src="login.png" alt="Login">
+
+        <form class="login-form">
+            <div class="form-group">
+                <input type="text" class="login-form-input" id="username" placeholder="Username">
+            </div>
+            <div class="form-group">
+                <input type="password" class="login-form-input" id="password" placeholder="Password">
+            </div>
+            <button class="login-form-button">Login</button>
+        </form>
+    </div>
+</body>
+</html>
